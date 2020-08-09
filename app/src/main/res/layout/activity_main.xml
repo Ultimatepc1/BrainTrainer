@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="198dp"
+            android:layout_height="141dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="102dp"
+            android:layout_marginTop="211dp"
+            android:background="#7CE380"
+            android:gravity="center"
+            android:onClick="startgame"
+            android:text="Go"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="78dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="false"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="22dp"
+            android:background="#DAC61C"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="0:30"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="78dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="false"
+            android:layout_marginStart="168dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="2+5"
+            android:textSize="24sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/answers"
+            android:layout_width="78dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="false"
+            android:layout_marginStart="310dp"
+            android:layout_marginLeft="310dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="309dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="309dp"
+            android:background="#3FD39F"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="0/0"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <GridLayout
+            android:layout_width="360dp"
+            android:layout_height="171dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="98dp"
+            android:rowCount="2"
+            android:columnCount="2">
+
+            <Button
+                android:id="@+id/option1"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="#F35E5E"
+                android:fontFamily="sans-serif-medium"
+                android:text="Option1"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                android:onClick="checkans"/>
+
+            <Button
+                android:id="@+id/option2"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="#83DD4B"
+                android:fontFamily="sans-serif-medium"
+                android:text="Option2"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                android:onClick="checkans"/>
+
+            <Button
+                android:id="@+id/option3"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="#9C6FC8"
+                android:fontFamily="sans-serif-medium"
+                android:text="Option3"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                android:onClick="checkans"/>
+
+            <Button
+                android:id="@+id/option4"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:background="#DD1BDA"
+                android:fontFamily="sans-serif-medium"
+                android:text="Option4"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                android:onClick="checkans"/>
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/anscheck"
+            android:layout_width="313dp"
+            android:layout_height="67dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp"
+            android:layout_marginBottom="249dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="Wrong )-:"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/playagain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="155dp"
+            android:layout_marginRight="155dp"
+            android:layout_marginBottom="190dp"
+            android:onClick="newgame"
+            android:text="Play Again"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <SeekBar
+            android:id="@+id/timesetter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="21dp"
+            android:thumbTint="#f87100"
+            android:progressTint="#f87100"/>
+
+        <TextView
+            android:id="@+id/timetextview"
+            android:layout_width="277dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="66dp"
+            android:layout_marginLeft="66dp"
+            android:layout_marginBottom="96dp"
+            android:background="#CA6BDA"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="0:30"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/changetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="147dp"
+            android:layout_marginRight="147dp"
+            android:layout_marginBottom="116dp"
+            android:onClick="completenewgame"
+            android:text="Change Time"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
